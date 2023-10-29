@@ -1,11 +1,23 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
+
+import SideBar from './Components/Layout/SideBar';
+import theme from './Components/Theme/Theme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <SideBar />
+        <header>
+          <Routes>
+            <Route>
+            </Route>
+          </Routes>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
